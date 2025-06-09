@@ -38,6 +38,7 @@ function toggleDropdown() {
     if (isOpen) {
         directions
             .style("height", node.scrollHeight + "px")
+            .style('overflow', 'hidden')
             .transition()
             .duration(400)
             .style("height", "0px");
@@ -52,14 +53,15 @@ function toggleDropdown() {
             .transition()
             .duration(400)
             .style("height", node.scrollHeight + "px")
-            .on("end", () => directions.style("height", "auto"));
+            .on("end", () => {
+                directions.style("height", "auto")
+                directions.style('overflow', 'visible');
+            });
 
         triangles
             .transition()
             .duration(400)
             .attr("transform", "rotate(180, 10, 10.67)");
-
-        console.log(directions.text());
     }
     // debugger;
 }

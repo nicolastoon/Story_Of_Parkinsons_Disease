@@ -274,7 +274,7 @@ html {
 }
 
 .text-column {
-    /* text-align: right; */
+    height: 100%;
 }
 #intro #intro > div > p, #intro #intro > div > h2, #intro #intro > div > h3 { 
     text-align: right;
@@ -780,7 +780,8 @@ html {
         min-height: 300px; 
     }
      #hand-viz-content-area > .two-column-layout {
-        height: auto; 
+        height: 100%; 
+        min-height: 130vh;
         align-items: center; 
     }
 
@@ -816,8 +817,10 @@ html {
 
 /* Styles for the new combined visualization page */
 #combined-viz-page {
+    display: flex;
     padding: 0; 
-    align-items: stretch; 
+    grid-row: auto auto auto;
+    /* align-items: stretch;  */
     justify-content: flex-start; 
 }
 
@@ -1305,7 +1308,8 @@ a:hover {
     padding: 15px;
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 0 0 4px 4px; : 100px; 
+    border-radius: 0 0 4px 4px; 
+    min-height: 100px; 
     text-align: left;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -1378,9 +1382,8 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0; 
+    margin: 40px 0; 
     box-sizing: border-box;
-    margin-top: -48px;
 }
 
 .dot-container {
